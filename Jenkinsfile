@@ -27,7 +27,7 @@ node {
 
                 script { 
 
-                    withDockerRegistry(credentialsId: '6aa8b44c-287a-4cd1-8acc-ba7225280288', url: 'salemalsaadi/my-image-of-project-ubuntu-apache-php') {
+                    withDockerRegistry(credentialsId: '6aa8b44c-287a-4cd1-8acc-ba7225280288', url: 'https://hub.docker.com/repository/docker/salemalsaadi/my-image-of-project-ubuntu-apache-php') {
 					// some block
 					} 
 
