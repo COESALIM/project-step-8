@@ -5,8 +5,9 @@ node {
   }
 
   stage('Create Docker Image') {
-    docker.build("docker_image:${env.BUILD_NUMBER}")
-    sh "docker tag docker_image  salemalsaadi/test"
+    docker.build("docker_image")
+    
+   sh "docker tag docker_image  salemalsaadi/test:${env.BUILD_NUMBER}"
   }
 
   stage ('Run Application') {
