@@ -21,5 +21,22 @@ node {
       
     }
   }
+	        stage('Deploy our image') { 
+
+            steps { 
+
+                script { 
+
+                    withDockerRegistry(credentialsId: '6aa8b44c-287a-4cd1-8acc-ba7225280288', url: 'salemalsaadi/my-image-of-project-ubuntu-apache-php') {
+					// some block
+	} 
+
+                        dockerImage.push(){ 
+
+                    }
+
+                } 
+            }
+	}
   
  }
