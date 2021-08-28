@@ -21,6 +21,15 @@ node {
       
     }
   }
+  stage ('Push Image'){
+  docker.withRegistry('https://registry.hub.docker.com', 'dockerHub') {
+
+  def customImage = docker.build("salemalsaadi/test")
+
+        /* Push the container to the custom Registry */
+  customImage.push()
+    }
+	}
 
   
  }
